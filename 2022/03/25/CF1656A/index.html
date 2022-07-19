@@ -4,7 +4,7 @@
 <head>
   <meta name="generator" content="Hexo 6.2.0">
   <meta charset="utf-8">
-  <meta name="robots" content="noindex,follow">
+  
 
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://fastly.jsdelivr.net'>
@@ -18,15 +18,20 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
-  <title>归档 - ChenLingHan</title>
+  <title>CF1656A Good Pairs 题解 - ChenLingHan</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://example.com/archives/index.html">
+    <meta name="description" content="简化题意： 在数轴上有一点 $a_i$ 和一点 $a_j$，在数轴上找一点 $a_k$，使得 $|a_i-a_j|&#x3D;|a_k-a_i|+|a_k-a_j|$。 我们知道： $|a_i-a_j|$ 的几何意义就是点 $a_i$ 和点 $a_j$ 在数轴上的距离。 如果要找一点 $a_k$ ，使得 $a_k,a_i$ 在数轴上的距离与 $a_k,a_j$ 在数轴上的距离的和恰好与 $a_i,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CF1656A Good Pairs 题解">
+<meta property="og:url" content="http://example.com/2022/03/25/CF1656A/index.html">
 <meta property="og:site_name" content="ChenLingHan">
+<meta property="og:description" content="简化题意： 在数轴上有一点 $a_i$ 和一点 $a_j$，在数轴上找一点 $a_k$，使得 $|a_i-a_j|&#x3D;|a_k-a_i|+|a_k-a_j|$。 我们知道： $|a_i-a_j|$ 的几何意义就是点 $a_i$ 和点 $a_j$ 在数轴上的距离。 如果要找一点 $a_k$ ，使得 $a_k,a_i$ 在数轴上的距离与 $a_k,a_j$ 在数轴上的距离的和恰好与 $a_i,">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-25T01:36:48.000Z">
+<meta property="article:modified_time" content="2022-07-19T00:41:55.419Z">
 <meta property="article:author" content="ChenLingHan">
+<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
   
   
@@ -58,8 +63,10 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout=''>
+    <aside class='l_left' layout='post'>
     
 
 
@@ -69,159 +76,95 @@
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav></header>
 
 <div class="widgets">
-<div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">Stellar 入门指南</span></div><div class="widget-body fs14"><p>欢迎使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/">Stellar</a> 主题，下面是您的入门指南，祝您使用愉快！<br><br><br><strong>第一步</strong><br>创建 <code>blog/_config.stellar.yml</code> 文件，在此文件中填写需要自定义的主题配置。<br><br><br><strong>第二步</strong><br>创建 <code>blog/source/_data/widgets.yml</code> 文件，此文件中填写需要自定义的侧边栏组件，例如 <code>welcome</code> 组件。<br><br><br>如果有任何疑问，请先查阅<a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">文档</a>，如果文档中没有提供，请提 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/issues/">issue</a> 向开发中询问。</p>
-</div></div>
+
 
 <div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/03/19/P8220/">P8220 [WFOI - 02] I wanna win the race（比赛） 题解</a></div><div class="more-item"><a class="title" href="/2022/03/19/P8219/">P8219 [WFOI - 02] I wanna a feasitor（化验器） 题解</a></div><div class="more-item"><a class="title" href="/2022/01/24/P8071/">P8071 [COCI2009-2010#7] SPAVANAC 题解</a></div><div class="more-item"><a class="title" href="/2022/01/20/noi-jsoi/">NOI系列竞赛活动-江苏认证环境</a></div><div class="more-item"><a class="title" href="/2022/03/25/CF1657A/">CF1657A Integer Moves 题解</a></div></div></div>
+
+
+
 </div>
 
 
     </aside>
-    <div class='l_main list'>
+    <div class='l_main'>
       
-  
-
-<header class="header mobile-only">
-
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.luogu.com.cn/upload/usericon/233576.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">ChenLingHan</div><div class="sub cap">凌寒独自开</div></a></div>
-</header>
-
-
 
       
 
-  
-  <div class='nav-wrap'>
-  <nav class='sub post cap'>
     
-      <a href='/'>近期发布</a>
-    
-    
-      
-        <a href='/categories'>分类</a>
-      
-    
-    
-      
-        <a href='/tags'>标签</a>
-      
-    
-    
-      
-        <a class='active' href='/archives'>归档</a>
-      
-    
-  </nav>
-</div>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
 
-  <div class='post-list'>
-  	
-  	
-  		
-  		
-  			
-  		
-  	
-  		
-  		
-  	
-  		
-  		
-  	
-  		
-  		
-  	
-  		
-  		
-  	
-  		
-  		
-  	
-  	
-  		<article class='' id='archive'>
-  			<div class='archive-header h4'>2022</div>
-  			
-  				
-  		    
-  				
-  		    
-  				
-  		    
-  				
-  		    
-  				
-  		    
-  				
-  		    
-  				<div class='archive-list'>
-            <a class='post fs14' href="/2022/03/25/CF1657A/">
-    					<time>03-25</time>
-    					<span>
-                
-      						CF1657A Integer Moves 题解
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/2022/03/25/CF1656A/">
-    					<time>03-25</time>
-    					<span>
-                
-      						CF1656A Good Pairs 题解
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/2022/03/19/P8219/">
-    					<time>03-19</time>
-    					<span>
-                
-      						P8219 [WFOI - 02] I wanna a feasitor（化验器） 题解
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/2022/03/19/P8220/">
-    					<time>03-19</time>
-    					<span>
-                
-      						P8220 [WFOI - 02] I wanna win the race（比赛） 题解
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/2022/01/24/P8071/">
-    					<time>01-24</time>
-    					<span>
-                
-      						P8071 [COCI2009-2010#7] SPAVANAC 题解
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  				<div class='archive-list'>
-            <a class='post fs14' href="/2022/01/20/noi-jsoi/">
-    					<time>01-20</time>
-    					<span>
-                
-      						NOI系列竞赛活动-江苏认证环境
-      					
-              </span>
-    				</a>
-          </div>
-  			
-  		</article>
-  	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+          });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+              var all = MathJax.Hub.getAllJax(), i;
+              for(i=0; i < all.length; i += 1) {
+                  all[i].SourceElement().parentNode.className += ' has-jax';
+              }
+          });
+      </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-03-25T01:36:48.000Z">2022-03-25</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>CF1656A Good Pairs 题解</span></h1>
+<p>简化题意：</p>
+<p>在数轴上有一点 $a_i$ 和一点 $a_j$，在数轴上找一点 $a_k$，使得 $|a_i-a_j|&#x3D;|a_k-a_i|+|a_k-a_j|$。</p>
+<p>我们知道： $|a_i-a_j|$ 的几何意义就是点 $a_i$ 和点 $a_j$ 在数轴上的距离。</p>
+<p>如果要找一点 $a_k$ ，使得 $a_k,a_i$ 在数轴上的距离与 $a_k,a_j$ 在数轴上的距离的和恰好与 $a_i,a_j$ 在数轴上的距离相等。</p>
+<p>那么，不难发现，此点是 $a_i,a_j$ 之间的任意一点。（如果 $i&#x3D;j$，那么三点重合）。</p>
+<p>综上，因此：</p>
+<p>当 $2\le n$ 时，如果点 $a_i,a_j$ 分别为该数组的最大值或最小值，那么任意找一点 $a_k$ 都满足题意。</p>
+<p>当 $n&#x3D;1$ 时，那么 $a_i&#x3D;a_j&#x3D;a_k$，即为三点重合。</p>
+<p>代码：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> T;</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		<span class="type">int</span> n;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		<span class="type">int</span> a[n],minn=INT_MAX,maxn=<span class="number">0</span>,ans_i,ans_j;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			cin&gt;&gt;a[i];</span><br><span class="line">			<span class="keyword">if</span>(a[i]&lt;minn)&#123;</span><br><span class="line">				ans_i=i;</span><br><span class="line">				minn=a[i];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(a[i]&gt;maxn)&#123;</span><br><span class="line">				ans_j=i;</span><br><span class="line">				maxn=a[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;ans_i&lt;&lt;<span class="string">&quot; &quot;</span>&lt;&lt;ans_j&lt;&lt;endl;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/03/19/P8219/">P8219 [WFOI - 02] I wanna a feasitor（化验器） 题解<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/03/25/CF1657A/">CF1657A Integer Moves 题解<span class="note">较新</span></a></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body beaudar'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="beaudar" repo="ChenLingHan/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
+
+    </div>
   </div>
+
 
 
       
