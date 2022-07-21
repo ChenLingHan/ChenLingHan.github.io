@@ -162,8 +162,12 @@ OI终究还是白学了……
 <article class="md"><h2 class="post-title">P8071 [COCI2009-2010#7] SPAVANAC 题解</h2><div class="excerpt"><p>解析：
 令 $T &#x3D; H_{input} \times 60 + M_{input} - 45$
 可得：
-$$H_{output}&#x3D;\begin{cases}T&#x2F;60&amp;(T&gt;0)\ 23&amp;(T&lt;0)\end{cases}$$
-$$M_{output}&#x3D;\begin{cases}T%60&amp;(T&gt;0)\ 60+T&...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-01-24T05:22:29.000Z">2022-01-24</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
+
+当 $T&gt;0$ 时，$H_output&#x3D;T&#x2F;60,M_output&#x3D;T%60$
+当 $T&lt;0$ 时，$H_output&#x3D;23,M_output&#x3D;T+60$
+
+代码：
+123456789#include &lt;bi...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-01-24T05:22:29.000Z">2022-01-24</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
 </a><a class="post-card post " href="/2022/01/20/noi-jsoi/">
 <article class="md"><h2 class="post-title">NOI系列竞赛活动-江苏认证环境</h2><div class="excerpt"><p>$2021$ 年 $10$ 月 $19$ 日，中国计算机协会（CCF）在其全国青少年信息学奥林匹克竞赛（NOI）官网上发表了《关于CSP-J&#x2F;S 2021第二轮各省认证环境的情况公布》一文。
 根据文中信息显示，大多数省份都选择了 NOI Liunx 2.0 或 Windows 系统作为选手们的认证环境，也有不少省份选择了 Windows + NOI Liunx 2.0 虚拟机的形式...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-01-20T01:59:31.000Z">2022-01-20</time></span><span class="cap breadcrumb" style="color:#ff9800">杂谈</span></div></article>
