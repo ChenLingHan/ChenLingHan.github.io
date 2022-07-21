@@ -65,7 +65,7 @@
 
 <header class="header">
 
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.luogu.com.cn/upload/usericon/233576.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">ChenLingHan</div><div class="sub cap">凌寒独自开</div></a></div>
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.luogu.com.cn/upload/usericon/233576.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">ChenLingHan</div><div class="sub cap">墙角数枝梅 凌寒独自开</div></a></div>
 <nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/friends/">友链</a><a class="nav-item" href="/about/">关于</a></nav></header>
 
 <div class="widgets">
@@ -83,7 +83,7 @@
 
 <header class="header mobile-only">
 
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.luogu.com.cn/upload/usericon/233576.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">ChenLingHan</div><div class="sub cap">凌寒独自开</div></a></div>
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://cdn.luogu.com.cn/upload/usericon/233576.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">ChenLingHan</div><div class="sub cap">墙角数枝梅 凌寒独自开</div></a></div>
 </header>
 
 
@@ -117,40 +117,40 @@
 </div>
 
   <div class="post-list post"><a class="post-card post " href="/2022/03/25/CF1657A/">
-<article class="md"><h2 class="post-title">CF1657A Integer Moves 题解</h2><div class="excerpt"><p>分三种情况：
+<article class="md"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://source.unsplash.com/1280x640/?Codeforces"/></div><h2 class="post-title">CF1657A Integer Moves 题解</h2><div class="excerpt"><p>分三种情况：
 
 目标点为原点，无需走动。
 目标点到原点的距离为有理数，仅需走动 $1$ 步。
 以上两种情况都不成立，先走至 $(0,y)$，再走至 $(x,y)$，需走动 $2$ 步。
 
 小知识：(int)x 可对变量 $x$ 进行保留整数操作。
-1234567891011121314151617#include&lt;bits/stdc++.h&gt;using namespace std...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T02:44:34.000Z">2022-03-25</time></span><span class="cap breadcrumb">题解</span></div></article>
+1234567891011121314151617#include&lt;bits/stdc++.h&gt;using namespace std...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T02:44:34.000Z">2022-03-25</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
 </a><a class="post-card post " href="/2022/03/25/CF1656A/">
-<article class="md"><h2 class="post-title">CF1656A Good Pairs 题解</h2><div class="excerpt"><p>简化题意：
+<article class="md"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://source.unsplash.com/1280x640/?Codeforces"/></div><h2 class="post-title">CF1656A Good Pairs 题解</h2><div class="excerpt"><p>简化题意：
 在数轴上有一点 $a_i$ 和一点 $a_j$，在数轴上找一点 $a_k$，使得 $|a_i-a_j|&#x3D;|a_k-a_i|+|a_k-a_j|$。
 我们知道： $|a_i-a_j|$ 的几何意义就是点 $a_i$ 和点 $a_j$ 在数轴上的距离。
-如果要找一点 $a_k$ ，使得 $a_k,a_i$ 在数轴上的距离与 $a_k,a_j$ 在数轴上的距离的和恰好与 $a...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T01:36:48.000Z">2022-03-25</time></span><span class="cap breadcrumb">题解</span></div></article>
+如果要找一点 $a_k$ ，使得 $a_k,a_i$ 在数轴上的距离与 $a_k,a_j$ 在数轴上的距离的和恰好与 $a...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T01:36:48.000Z">2022-03-25</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
 </a><a class="post-card post " href="/2022/03/19/P8219/">
-<article class="md"><h2 class="post-title">P8219 [WFOI - 02] I wanna a feasitor（化验器） 题解</h2><div class="excerpt"><p>题目中提到的是最大约数，一开始也把我给蒙住了，最大约数该怎么枚举？
+<article class="md"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://source.unsplash.com/1280x640/?洛谷"/></div><h2 class="post-title">P8219 [WFOI - 02] I wanna a feasitor（化验器） 题解</h2><div class="excerpt"><p>题目中提到的是最大约数，一开始也把我给蒙住了，最大约数该怎么枚举？
 如何解决这个问题呢，我们就开始思考最大约数是怎么产生的。
 最大约数是怎么产生的呢？是因为最小约数而产生的啊！
 有没有恍然大悟的感觉？
 对于不同的数，它们的最大约数都不尽相同，但是它们的最小约数却有极大的概率是相同的（例如所有偶数的最小约数都是 $2$）！
-对于每一个有相同最小约数的数，这个数越大，那么这个数的最大约数也越大。...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-19T12:22:03.000Z">2022-03-19</time></span><span class="cap breadcrumb">题解</span></div></article>
+对于每一个有相同最小约数的数，这个数越大，那么这个数的最大约数也越大。...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-19T12:22:03.000Z">2022-03-19</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
 </a><a class="post-card post " href="/2022/03/19/P8220/">
-<article class="md"><h2 class="post-title">P8220 [WFOI - 02] I wanna win the race（比赛） 题解</h2><div class="excerpt"><p>正如题目所说：请注意，在【数据范围】中有重要的约束条件。
+<article class="md"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://source.unsplash.com/1280x640/?洛谷"/></div><h2 class="post-title">P8220 [WFOI - 02] I wanna win the race（比赛） 题解</h2><div class="excerpt"><p>正如题目所说：请注意，在【数据范围】中有重要的约束条件。
 首先，数据范围 $1&lt;a&lt;b&lt;n$ 以及 $0&lt;c$ 说明了所有 $b$ 类点在一个长为 $c$，宽为 $（b-a+1）$ 的矩形内（且该矩形在起点和终点之间）。
 其次，不难发现，我们还可以作一个以起点、终点为对角线的正方形（边长为 $n$）。
 那么就有两种情况：
 
 矩形在正方形内部（不含边）。
-矩形超出了正方...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-19T09:21:42.000Z">2022-03-19</time></span><span class="cap breadcrumb">题解</span></div></article>
+矩形超出了正方...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-19T09:21:42.000Z">2022-03-19</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
 </a><a class="post-card post " href="/2022/01/24/P8071/">
-<article class="md"><h2 class="post-title">P8071 [COCI2009-2010#7] SPAVANAC 题解</h2><div class="excerpt"><p>解析：
+<article class="md"><div class="post-cover"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://source.unsplash.com/1280x640/?洛谷"/></div><h2 class="post-title">P8071 [COCI2009-2010#7] SPAVANAC 题解</h2><div class="excerpt"><p>解析：
 令 $T &#x3D; H_{input} \times 60 + M_{input} - 45$
 可得：
 $H_{output}&#x3D;\begin{cases}T&#x2F;60&amp;(T&gt;0)\ 23&amp;(T&lt;0)\end{cases}	$
-$M_{output}&#x3D;\begin{cases}T%60&amp;(T&gt;0)\ 60+T&am...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-01-24T05:22:29.000Z">2022-01-24</time></span><span class="cap breadcrumb">题解</span></div></article>
+$M_{output}&#x3D;\begin{cases}T%60&amp;(T&gt;0)\ 60+T&am...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-01-24T05:22:29.000Z">2022-01-24</time></span><span class="cap breadcrumb" style="color:#03a9f4">题解</span></div></article>
 </a></div>
   
 
