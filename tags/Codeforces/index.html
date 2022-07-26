@@ -82,7 +82,7 @@
 <div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">欢迎</span></div><div class="widget-body fs14"><p>欢迎来到 ChenLingHan 的博客小站！本站建立于二十世纪二十年代初，长期维护并保持高频率更新。<br><hr><span id="hitokoto">正在加载一言……</span></p>
 </div></div>
 
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/01/24/P8071/">P8071 [COCI2009-2010#7] SPAVANAC 题解</a></div><div class="more-item"><a class="title" href="/2022/01/20/noi-jsoi/">NOI系列竞赛活动-江苏认证环境</a></div><div class="more-item"><a class="title" href="/2022/03/25/CF1657A/">CF1657A Integer Moves 题解</a></div><div class="more-item"><a class="title" href="/2022/03/19/P8220/">P8220 [WFOI - 02] I wanna win the race（比赛）题解</a></div><div class="more-item"><a class="title" href="/2022/03/19/P8219/">P8219 [WFOI - 02] I wanna a feasitor（化验器）题解</a></div></div></div>
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/01/24/P8071/">P8071 [COCI2009-2010#7] SPAVANAC 题解</a></div><div class="more-item"><a class="title" href="/2022/03/19/P8219/">P8219 [WFOI - 02] I wanna a feasitor（化验器）题解</a></div><div class="more-item"><a class="title" href="/2022/07/19/afo/">退役宣言</a></div><div class="more-item"><a class="title" href="/2022/03/25/CF1656A/">CF1656A Good Pairs 题解</a></div><div class="more-item"><a class="title" href="/2022/07/25/hitokoto/">在Hexo博客Stellar主题中引入一言</a></div></div></div>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/ChenLingHan" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="https://y.qq.com/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/></a><a class="social" href="https://www.luogu.com.cn/image" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/></a><a class="social" href="/about" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/></a></div></footer>
 
@@ -127,9 +127,21 @@
 </div>
 
   <div class="post-list post"><a class="post-card post " href="/2022/03/25/CF1657A/">
-<article class="md"><h2 class="post-title">CF1657A Integer Moves 题解</h2><div class="excerpt"><p>分三种情况考虑：1. 目标点为原点，无需走动。2. 目标点到原点的距离为有理数，仅需走动 1 步。3. 以上两种情况都不成立，先走至 (0,y)，再走至 (x,y)，需走动 2 步。</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T02:44:34.000Z">2022-03-25</time></span><span class="cap breadcrumb" style="color:#00CC66">题解</span></div></article>
+<article class="md"><h2 class="post-title">CF1657A Integer Moves 题解</h2><div class="excerpt"><p>Codeforces&nbsp;-&nbsp;CF1657Ahttps://codeforces.com/problemset/problem/1657/A
+
+分三种情况：
+
+目标点为原点，无需走动。
+目标点到原点的距离为有理数，仅需走动 $1$ 步。
+以上两种情况都不成立，先走至 $(0,y)$，再走至 $(x,y)$，需走动 $2$ 步。
+
+小知识：(int)x 可对变量 $x$ 进行保...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T02:44:34.000Z">2022-03-25</time></span><span class="cap breadcrumb" style="color:#00CC66">题解</span></div></article>
 </a><a class="post-card post " href="/2022/03/25/CF1656A/">
-<article class="md"><h2 class="post-title">CF1656A Good Pairs 题解</h2><div class="excerpt"><p>当 2≤n 时，如果点 a[i],a[j] 分别为该数组的最大值或最小值，那么任意找一点 a[k] 都满足题意。当 n=1 时，那么 a[i]=a[j]=a[k]，即为三点重合。</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T01:36:48.000Z">2022-03-25</time></span><span class="cap breadcrumb" style="color:#00CC66">题解</span></div></article>
+<article class="md"><h2 class="post-title">CF1656A Good Pairs 题解</h2><div class="excerpt"><p>Codeforces&nbsp;-&nbsp;CF1656Ahttps://codeforces.com/problemset/problem/1656/A
+
+简化题意：
+在数轴上有一点 $a_i$ 和一点 $a_j$，在数轴上找一点 $a_k$，使得 $|a_i-a_j|&#x3D;|a_k-a_i|+|a_k-a_j|$。
+我们知道： $|a_i-a_j|$ 的几何意义就是点 $a_i$...</p></div><div class="meta cap"><span class="cap" id="post-meta">发布于&nbsp;<time datetime="2022-03-25T01:36:48.000Z">2022-03-25</time></span><span class="cap breadcrumb" style="color:#00CC66">题解</span></div></article>
 </a></div>
   
 
