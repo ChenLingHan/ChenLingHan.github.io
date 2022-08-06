@@ -29,7 +29,7 @@
 <meta property="og:description" content="一言网创立于2016年，隶属于萌创Team，目前网站主要提供一句话服务。简单来说，一言指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。或是感动，或是开心，有或是单纯的回忆。本篇博客将会指导大家如何在Hexo博客Stellar主题中引入一言。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-07-25T06:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-06T11:47:31.608Z">
+<meta property="article:modified_time" content="2022-08-06T12:15:04.346Z">
 <meta property="article:author" content="ChenLingHan">
 <meta property="article:tag" content="一言">
 <meta name="twitter:card" content="summary_large_image">
@@ -135,9 +135,6 @@
 
 <article class='content md post'>
 <h1 class="article-title"><span>在Hexo博客Stellar主题中引入一言</span></h1>
-<p>一言网创立于2016年，隶属于萌创Team，目前网站主要提供一句话服务。简单来说，一言指的就是一句话，可以是动漫中的台词，也可以是网络上的各种小段子。或是感动，或是开心，有或是单纯的回忆。本篇博客将会指导大家如何在Hexo博客Stellar主题中引入一言。</p>
-<span id="more"></span>
-
 <p>效果如下：<span id="hitokoto">正在加载一言……</span></p>
 <h3 id="关于一言"><a href="#关于一言" class="headerlink" title="关于一言"></a>关于一言</h3><div class="tag-plugin link dis-select"><a class="link-card plain" title="Hitokoto&nbsp;-&nbsp;一言" href="https://hitokoto.cn/" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><span class="title">Hitokoto&nbsp;-&nbsp;一言</span><span class="desc fs12">https://hitokoto.cn/</span></div><div class="right"><div class="lazy img" data-bg="https://i.loli.net/2020/02/07/kDIUWCQpKEdFTP8.png"></div></div></a></div>
 
@@ -174,13 +171,10 @@
     <div class='cmt-title cap theme'>
       快来参与讨论吧
     </div>
-    <div class='cmt-body beaudar'>
+    <div class='cmt-body twikoo'>
       
 
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="beaudar" repo="ChenLingHan/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
-
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
     </div>
   </div>
 
@@ -341,32 +335,25 @@
 <!-- optional -->
 
   <script>
-  function loadBeaudar() {
-    const els = document.querySelectorAll("#comments #beaudar");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://beaudar.lipk.org/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-      loadBeaudar();
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js","envId":"https://xxx"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 

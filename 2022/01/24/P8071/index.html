@@ -29,7 +29,7 @@
 <meta property="og:description" content="这是 COCI2009-2010#7 的第一题，难度在入门左右。本篇博客同时发布为洛谷 P8071 的题解。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-24T05:22:29.000Z">
-<meta property="article:modified_time" content="2022-08-06T11:47:31.611Z">
+<meta property="article:modified_time" content="2022-08-06T12:15:04.345Z">
 <meta property="article:author" content="ChenLingHan">
 <meta property="article:tag" content="洛谷">
 <meta name="twitter:card" content="summary">
@@ -88,7 +88,7 @@
 <div class="widgets">
 
 
-<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/03/25/CF1657A/">CF1657A Integer Moves 题解</a></div><div class="more-item"><a class="title" href="/2022/03/25/CF1656A/">CF1656A Good Pairs 题解</a></div><div class="more-item"><a class="title" href="/2022/08/06/CF1716A/">CF1716A 2-3 Moves 题解</a></div><div class="more-item"><a class="title" href="/2022/03/19/P8220/">P8220 [WFOI - 02] I wanna win the race（比赛）题解</a></div><div class="more-item"><a class="title" href="/2022/01/24/P8071/">P8071 [COCI2009-2010#7] SPAVANAC 题解</a></div></div></div>
+<div class="widget-wrap" id="recent"><div class="widget-header cap dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><div class="more-item"><a class="title" href="/2022/07/19/afo/">退役宣言</a></div><div class="more-item"><a class="title" href="/2022/07/25/hitokoto/">在Hexo博客Stellar主题中引入一言</a></div><div class="more-item"><a class="title" href="/2022/03/25/CF1656A/">CF1656A Good Pairs 题解</a></div><div class="more-item"><a class="title" href="/2022/08/06/CF1716A/">CF1716A 2-3 Moves 题解</a></div><div class="more-item"><a class="title" href="/2022/03/25/CF1657A/">CF1657A Integer Moves 题解</a></div></div></div>
 
 
 
@@ -137,9 +137,6 @@
 
 <article class='content md post'>
 <h1 class="article-title"><span>P8071 [COCI2009-2010#7] SPAVANAC 题解</span></h1>
-<p>这是 COCI2009-2010#7 的第一题，难度在入门左右。本篇博客同时发布为洛谷 P8071 的题解。</p>
-<span id="more"></span>
-
 <div class="tag-plugin link dis-select"><a class="link-card plain" title="洛谷&nbsp;-&nbsp;P8071" href="https://www.luogu.com.cn/problem/P8071" target="_blank" rel="external nofollow noopener noreferrer"><div class="left"><span class="title">洛谷&nbsp;-&nbsp;P8071</span><span class="desc fs12">https://www.luogu.com.cn/problem/P8071</span></div><div class="right"><div class="lazy img" data-bg="https://www.luogu.com.cn/favicon.ico"></div></div></a></div>
 
 <p><strong>解析：</strong></p>
@@ -172,13 +169,10 @@
     <div class='cmt-title cap theme'>
       快来参与讨论吧
     </div>
-    <div class='cmt-body beaudar'>
+    <div class='cmt-body twikoo'>
       
 
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="beaudar" repo="ChenLingHan/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
-
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
     </div>
   </div>
 
@@ -339,32 +333,25 @@
 <!-- optional -->
 
   <script>
-  function loadBeaudar() {
-    const els = document.querySelectorAll("#comments #beaudar");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://beaudar.lipk.org/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-      loadBeaudar();
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js","envId":"https://xxx"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 

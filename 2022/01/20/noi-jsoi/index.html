@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/7bxgzvtn.png">
 <meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/udal1xpv.png">
 <meta property="article:published_time" content="2022-01-20T01:59:31.000Z">
-<meta property="article:modified_time" content="2022-08-06T11:47:31.608Z">
+<meta property="article:modified_time" content="2022-08-06T12:15:04.345Z">
 <meta property="article:author" content="ChenLingHan">
 <meta property="article:tag" content="CSP">
 <meta name="twitter:card" content="summary_large_image">
@@ -140,9 +140,6 @@
 
 <article class='content md post'>
 <h1 class="article-title"><span>NOI系列竞赛活动-江苏认证环境</span></h1>
-<p>在CSP2021中，江苏使用了别具一格的在Windows环境下搭建的NOI Liunx 2.0 裁剪版。那么NOI Liunx 2.0 裁剪版是什么样的一个概念呢？优势又在哪里呢？对选手的认证有什么影响呢？下面请读者随着本篇博客的讲解来看看吧！</p>
-<span id="more"></span>
-
 <p>$2021$ 年 $10$ 月 $19$ 日，<strong>中国计算机协会</strong>（CCF）在其<strong>全国青少年信息学奥林匹克竞赛</strong>（NOI）官网上发表了<a target="_blank" rel="noopener" href="https://www.noi.cn/xw/2021-10-19/745497.shtml">《关于CSP-J&#x2F;S 2021第二轮各省认证环境的情况公布》</a>一文。</p>
 <p>根据文中信息显示，大多数省份都选择了 NOI Liunx 2.0 或 Windows 系统作为选手们的认证环境，也有不少省份选择了 Windows + NOI Liunx 2.0 虚拟机的形式。但江苏的认证环境情况有些别具一格：江苏并不使用 NOI Liunx 2.0 ，而是使用在 Windows 环境下搭建的 <strong>NOI Liunx 2.0 裁剪版</strong>。</p>
 <p>什么是 <strong>NOI Liunx 2.0 裁剪版</strong> 呢？正巧，ChenLingHan 同学是一名 JSOIer，有幸参加了在南京举办的 $CSP2021$ 江苏赛区认证活动，并亲自在考场上体验了 <strong>NOI Liunx 2.0 裁剪版</strong>！</p>
@@ -197,13 +194,10 @@
     <div class='cmt-title cap theme'>
       快来参与讨论吧
     </div>
-    <div class='cmt-body beaudar'>
+    <div class='cmt-body twikoo'>
       
 
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="beaudar" repo="ChenLingHan/blog-comments" issue-term="pathname" theme="preferred-color-scheme" input-position="top" comment-order="desc" loading="false" branch="main"></div>
-
+<div id="twikoo_container"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
     </div>
   </div>
 
@@ -364,32 +358,25 @@
 <!-- optional -->
 
   <script>
-  function loadBeaudar() {
-    const els = document.querySelectorAll("#comments #beaudar");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://beaudar.lipk.org/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-      loadBeaudar();
-  });
-</script>
+    function load_twikoo() {
+        if (!document.querySelectorAll("#twikoo_container")[0]) return;
+        stellar.loadScript('https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js', {defer: true}).then(function () {
+            const el = document.getElementById("twikoo_container");
+            var path = el.getAttribute('comment_id');
+            if (!path) {
+                path = decodeURI(window.location.pathname);
+            }
+            twikoo.init(Object.assign({"js":"https://fastly.jsdelivr.net/npm/twikoo@1.4.0/dist/twikoo.all.min.js","envId":"https://xxx"}, {
+                el: '#twikoo_container',
+                path: path,
+            }));
+        });
+    }
 
+    window.addEventListener('DOMContentLoaded', (event) => {
+        load_twikoo();
+    });
+</script>
 
 
 
